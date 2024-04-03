@@ -22,13 +22,28 @@ body{
 }
 
 /* ***** contacts**** */
-#contacts {
+#contactsContainer {
     width: 40%;
-    height: calc(100vh - 70px);
 }
 .toolbar {
     height: 70px;
     background: var(--color-bg-toolbar-graylight);
+}
+.notification{
+    height: 70px;
+    background-color: var(--color-bg-toolbar-celeste);
+}
+.search{
+    height: 50px;
+}
+.contacts{
+    height: calc(100% - 190px);
+    overflow-y: auto;
+}
+/* contact */
+.contacts img{
+    width: 40%;
+
 }
 /* ******** chat *********** */
 #chatContainer{
@@ -38,4 +53,7 @@ body{
     height:calc(100% - 140px);
     overflow-y: auto;
     padding: 20px;
+}
+.toolbarChat{
+    background-color: var(--color-bg-message);
 }
