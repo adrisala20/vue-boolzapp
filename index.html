@@ -16,36 +16,51 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" type="module"></script>
     <title>Boolzapp</title>
 </head>
 
 <body>
     <div id="app" class="as-debug ">
-        <div class="container as-debug my-5 p-0 bg-white  d-flex ">
-            <!-- ---- contatti sinistra -->
+        <div class="container as-debug my-5 h-100  p-0 bg-white  d-flex ">
+            <!---------------------- CONTACTS ------------- -->
             <div id="contactsContainer" class="as-debug">
                 <div class="toolbar"></div>
-                <div class="notification"></div>
-                <div class="search"></div>
+                <div class="notification">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <!-- search -->
+                <div class="search">
+                    <nav class="navbar bg-body-tertiary ">
+                        <form class="container-fluid">
+                            <div class="input-group ">
+                                <span class="input-group-text" id="input"><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat"
+                                    aria-label="Username">
+                            </div>
+                        </form>
+                    </nav>
+                </div>
+                <!-- contact -->
                 <div class="contacts">
-                    <div class="contact d-flex">
-                        <div>
-                            <img src="img/avatar_1.jpg" alt="michele">
+                    <div class="contact d-flex align-items-center ">
+                        <div class="avatar">
+                            <img src="img/avatar_1.jpg" alt="michele" class="img-fluid rounded-circle ">
                         </div>
-                        <div>
-                            <h6>michele</h6>
-                            <p>messaggio</p>
+                        <div class=" ">
+                            <h6 class="text-capitalize ">michele</h6>
+                            <p class="fw-light fs-6 ">Ultimo messaggio</p>
                         </div>
-                        <div>
-                            <span> 12.55</span>
+                        <div class="time ms-auto ">
+                            <span class="fw-light fs-6 "> 12.55</span>
                         </div>
 
                     </div>
                 </div>
 
             </div>
-            <!-- ---- chat destra---- -->
+            <!-- ----------------- CHAT -------------- -->
             <div id="chatContainer" class="as-debug d-flex flex-column align-content-between  ">
                 <div class="toolbar">
 

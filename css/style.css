@@ -41,9 +41,12 @@ body{
     overflow-y: auto;
 }
 /* contact */
-.contacts img{
+.contact{
+    padding: 10px;
+    border-bottom: 1px solid var(--color-bg-toolbar-graylight);
+}
+.contact img{
     width: 40%;
-
 }
 /* ******** chat *********** */
 #chatContainer{
