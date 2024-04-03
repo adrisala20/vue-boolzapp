@@ -1,0 +1,14 @@
+.as-debug {
+    border: 1px solid red;
+}
+/* general */
+:root {
+	--color-bg-blackgreen: #009688;
+	--color-bg-toolbar-graylight: #eaeaea;
+	--color-bg-toolbar-celeste: #8edafc;
+	--color-bg-chat-green: #d5f9ba;
+	--color-bg-message: #f3eeea;
+	--color-icon-graylight: #b1b1b1;
+	--color-icon-gray: #6b7376;
+}
+
