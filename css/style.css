@@ -1,5 +1,5 @@
 .as-debug {
-    border: 1px solid red;
+    border: 1px solid pink;
 }
 /* general */
 body{
@@ -24,9 +24,18 @@ body{
 /* ***** contacts**** */
 #contacts {
     width: 40%;
+    height: calc(100vh - 70px);
+}
+.toolbar {
+    height: 70px;
+    background: var(--color-bg-toolbar-graylight);
 }
 /* ******** chat *********** */
-#chat{
+#chatContainer{
     width: 60%;
 }
-
+.chat{
+    height:calc(100% - 140px);
+    overflow-y: auto;
+    padding: 20px;
+}
