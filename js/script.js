@@ -4,6 +4,7 @@ createApp ({
     data(){
         return{
             contacts,
+            activeContactId: 1
         }
     },
     methods:{

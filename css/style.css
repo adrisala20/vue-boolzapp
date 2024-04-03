@@ -77,15 +77,31 @@ body{
 .contact img{
     width: 30%;
 }
+.active{
+    background-color: var(--color-bg-toolbar-graylight);
+}
 /* ************ CHAT *********** */
 #chatContainer{
     width: 60%;
     background-image: url(/img/mine.jpg);
 }
+/* chat */
 .chat{
     height:calc(100% - 140px);
     overflow-y: auto;
     padding: 20px;
+}
+.message{
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid ghostwhite;
+    padding: 15px;
+}
+.send{
+
+}
+.received{
+
 }
 /* toolbar */
 .toolbarChat{

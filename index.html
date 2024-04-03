@@ -71,7 +71,7 @@
                 </div>
                 <!-- contact -->
                 <div class="contacts">
-                    <div class="contact d-flex" v-for="(contact,index) in contacts" :key="contacts.id">
+                    <div class="contact d-flex" :class="{'active': activeContactId === contact.id}" v-for="(contact,index) in contacts" :key="contacts.id">
                         <div class="avatar">
                             <img :src="'./img/' + contact.avatar" :alt="contact.name" class="img-fluid rounded-circle ">
                         </div>
@@ -107,7 +107,20 @@
                     </div>
                 </div>
                 <!-- chat -->
-                <div class="chat"></div>
+                <div class="chat">
+                    <div class="as-debug">
+                        <div class="message">
+                            
+                        </div>
+                    </div>
+                    <div class="as-debug">
+                        
+                        <div class="message">
+
+                        </div>
+                    </div>
+
+                </div>
                 <!-- toolbarchat -->
                 <div class="toolbarChat d-flex justify-content-between">
                     <div class="icon">
