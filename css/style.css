@@ -29,10 +29,6 @@ body{
     height: 70px;
     background: var(--color-bg-toolbar-graylight);
 }
-.notification{
-    height: 70px;
-    background-color: var(--color-bg-toolbar-celeste);
-}
 .search{
     height: 50px;
 }
@@ -40,11 +36,24 @@ body{
     height: calc(100% - 190px);
     overflow-y: auto;
 }
-/* contact */
+/********************* contact *******/
 .contact{
     padding: 10px;
     border-bottom: 1px solid var(--color-bg-toolbar-graylight);
 }
+/* notification */
+.notification{
+    height: 70px;
+    background-color: var(--color-bg-toolbar-celeste);
+}
+.notification i{
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+    color: var(--color-bg-toolbar-celeste);
+}
+
+/* contact */
 .contact img{
     width: 40%;
 }
