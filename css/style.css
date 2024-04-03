@@ -41,6 +41,15 @@ body{
     padding: 10px;
     border-bottom: 1px solid var(--color-bg-toolbar-graylight);
 }
+/* toolbar */
+.user div img{
+    width: 17%;
+}
+.icons i{
+    padding-left: 10px;
+    color: var(--color-icon-graylight);
+    cursor: pointer;
+}
 /* notification */
 .notification{
     height: 70px;
@@ -51,11 +60,15 @@ body{
     background-color: white;
     padding: 10px;
     color: var(--color-bg-toolbar-celeste);
+    cursor: pointer;
+}
+.notification a{
+    cursor: pointer;
 }
 
 /* contact */
 .contact img{
-    width: 40%;
+    width: 30%;
 }
 /* ******** chat *********** */
 #chatContainer{
