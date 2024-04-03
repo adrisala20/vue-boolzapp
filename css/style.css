@@ -21,4 +21,12 @@ body{
     background: linear-gradient(180deg,#009688 20%, #D8DBD5 20% );
 }
 
+/* ***** contacts**** */
+#contacts {
+    width: 40%;
+}
+/* ******** chat *********** */
+#chat{
+    width: 60%;
+}
 
