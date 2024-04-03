@@ -108,18 +108,11 @@
                 </div>
                 <!-- chat -->
                 <div class="chat">
-                    <div class="as-debug">
-                        <div class="message">
-                            
+                    <div class="d-flex p-3" v-for="(msg,index) in activeContact.messages">
+                        <div class="msg" :class="msg.status">
+                            {{msg.message}}
                         </div>
                     </div>
-                    <div class="as-debug">
-                        
-                        <div class="message">
-
-                        </div>
-                    </div>
-
                 </div>
                 <!-- toolbarchat -->
                 <div class="toolbarChat d-flex justify-content-between">

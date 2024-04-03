@@ -91,17 +91,19 @@ body{
     overflow-y: auto;
     padding: 20px;
 }
-.message{
+.msg{
     width: 250px;
     border-radius: 10px;
     border: 1px solid ghostwhite;
     padding: 15px;
 }
-.send{
-
+.sent{
+    background-color: var(--color-bg-chat-green);
+    margin-left: auto;
 }
 .received{
-
+    background-color: white;
+    margin-right: auto;
 }
 /* toolbar */
 .toolbarChat{

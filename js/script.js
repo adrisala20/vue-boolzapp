@@ -11,7 +11,9 @@ createApp ({
 
     },
     computed:{
-
+        activeContact(){
+            return this.contacts.find((el)=> el.id ===this.activeContactId)
+        }
     },
     mounted(){
         console.log(this.contacts)
