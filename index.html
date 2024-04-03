@@ -36,11 +36,9 @@
                         </div>
                     </div>
                     <div class="icons d-flex ">
-                        
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
                 <!-- notification -->
@@ -51,7 +49,7 @@
                         <a href="#">
                             <span class="fw-light fs-6 text-body-secondary ">Attiva notifiche desktop</span>
                         </a>
-                        
+
                     </div>
                 </div>
                 <!-- search -->
@@ -69,16 +67,16 @@
                 </div>
                 <!-- contact -->
                 <div class="contacts">
-                    <div class="contact d-flex align-items-center ">
+                    <div class="contact d-flex">
                         <div class="avatar">
                             <img src="img/avatar_1.jpg" alt="michele" class="img-fluid rounded-circle ">
                         </div>
                         <div class=" ">
                             <h6 class="text-capitalize ">michele</h6>
-                            <p class="fw-light fs-6 ">Ultimo messaggio</p>
+                            <p class="fw-light fs-6 text-body-tertiary  ">Ultimo messaggio</p>
                         </div>
                         <div class="time ms-auto ">
-                            <span class="fw-light fs-6 "> 12.55</span>
+                            <span class="fw-light fs-6 text-body-tertiary "> 12.55</span>
                         </div>
 
                     </div>
@@ -87,11 +85,36 @@
             </div>
             <!-- ----------------- CHAT -------------- -->
             <div id="chatContainer" class="as-debug d-flex flex-column align-content-between  ">
-                <div class="toolbar">
-
+                <!-- toolbar -->
+                <div class="toolbar p-3 d-flex justify-content-between  align-items-center ">
+                    <div class="user d-flex">
+                        <div class="m-auto  ">
+                            <img src="img/avatar_1.jpg" alt="michele" class=" img-fluid rounded rounded-circle ">
+                        </div>
+                        <div>
+                            <h6 class="m-0 ">Michele</h6>
+                            <p class="fw-light fs-6 text-body-tertiary ">Ultimo accesso oggi</p>
+                        </div>
+                    </div>
+                    <div class="icons d-flex ">
+                        <i class="fa-solid fa-search"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
+                <!-- chat -->
                 <div class="chat"></div>
-                <div class="toolbarChat ">
+                <!-- toolbarchat -->
+                <div class="toolbarChat d-flex justify-content-between">
+                    <div class="icon">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="form-control container-fluid " id="textChat" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
 
                 </div>
 

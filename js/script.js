@@ -16,4 +16,4 @@ createApp ({
         console.log(this.contacts)
     }
 
-}).mounted('#app')
+}).mount('#app')
