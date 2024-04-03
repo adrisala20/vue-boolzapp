@@ -54,7 +54,11 @@
                 </div>
                 <!-- search -->
                 <div class="search">
-                    <nav class="navbar bg-body-tertiary ">
+                    <div class="inputContact">
+                         <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control container-fluid " id="textChat" placeholder="cerca o inizia una nuova chat">
+                    </div>
+                    <!-- <nav class="navbar bg-body-tertiary ">
                         <form class="container-fluid">
                             <div class="input-group ">
                                 <span class="input-group-text" id="input"><i
@@ -63,16 +67,16 @@
                                     aria-label="Username">
                             </div>
                         </form>
-                    </nav>
+                    </nav> -->
                 </div>
                 <!-- contact -->
                 <div class="contacts">
-                    <div class="contact d-flex">
+                    <div class="contact d-flex" v-for="(contact,index) in contacts" :key="contacts.id">
                         <div class="avatar">
-                            <img src="img/avatar_1.jpg" alt="michele" class="img-fluid rounded-circle ">
+                            <img :src="'./img/' + contact.avatar" :alt="contact.name" class="img-fluid rounded-circle ">
                         </div>
                         <div class=" ">
-                            <h6 class="text-capitalize ">michele</h6>
+                            <h6 class="text-capitalize ">{{contact.name}}</h6>
                             <p class="fw-light fs-6 text-body-tertiary  ">Ultimo messaggio</p>
                         </div>
                         <div class="time ms-auto ">
@@ -109,7 +113,7 @@
                     <div class="icon">
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
-                    <div class="input">
+                    <div class="inputChat">
                         <input type="text" class="form-control container-fluid " id="textChat" placeholder="Scrivi un messaggio">
                     </div>
                     <div class="icon">

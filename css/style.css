@@ -65,6 +65,13 @@ body{
 .notification a{
     cursor: pointer;
 }
+/* search */
+.search .inputContact{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* contact */
 .contact img{
@@ -93,7 +100,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.input{
+.inputChat{
     border-color: white;
     width: 70%;
     display: flex;
