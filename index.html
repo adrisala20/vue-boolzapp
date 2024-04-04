@@ -62,6 +62,9 @@
                 </div>
                 <!-- contact -->
                 <div class="contacts">
+                    <div class="alert alert-warning " v-if="searchContact < 1">
+                        <h6>l'utente non é presente</h6>
+                    </div>
                     <div class="contact d-flex" :class="{'active': activeContactId === contact.id}" v-for="(contact,index) in searchContact" :key="contacts.id" @click="clickActiveContact(contact.id)">
                         <div class="avatar">
                             <img :src="'./img/' + contact.avatar" :alt="contact.name" class="img-fluid rounded-circle ">
