@@ -18,16 +18,16 @@ createApp ({
        createMessage(message){
         const newMessage = {
             date: dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss'),
-            message: messageText,
-            status:'send'
+            message: this.messageText,
+            status:'sent'
         }
         return newMessage;
        }, 
        sendMessage(){
         let newMessage = this.createMessage(this.messageText);
-        this.activeContact.message.push(newMessage)
-       }
-       
+        this.activeContact.messages.push(newMessage);
+        return
+       }       
     },
     computed:{
         activeContact(){
