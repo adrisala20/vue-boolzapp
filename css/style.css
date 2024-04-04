@@ -74,12 +74,12 @@ body{
     cursor: pointer;
 }
 /* search */
-.search .inputContact{
+/* .search .inputContact{
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* contact */
 .avatar img{

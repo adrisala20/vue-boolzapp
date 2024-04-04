@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="pt-3 ps-2  ">
-                        <h6>Adriana</h6>
+                        <h5>Adriana</h5>
                     </div>
                     <div class="icons d-flex ms-auto ">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -55,10 +55,10 @@
                 </div>
                 <!-- search -->
                 <div class="search">
-                    <div class="inputContact">
-                         <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control container-fluid " id="textChat" placeholder="cerca o inizia una nuova chat" >
-                    </div>
+                    <div class="input-group container-fluid pt-1 ">
+                        <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat">
+                      </div>
                 </div>
                 <!-- contact -->
                 <div class="contacts">
@@ -112,7 +112,7 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="inputChat">
-                        <input type="text" class="form-control container-fluid "placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control container-fluid "placeholder="Scrivi un messaggio" v-model="messageText" @keyup.enter="">
                     </div>
                     <div class="icon">
                         <i class="fa-solid fa-microphone"></i>

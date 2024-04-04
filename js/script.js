@@ -8,12 +8,24 @@ createApp ({
         return{
             contacts,
             activeContactId: 1,
+            messageText:'',
         }
     },
     methods:{
        clickActiveContact(id){
         this.activeContactId = id;
        },
+       createMessage(){
+        const newMessage = {
+            date: '',
+            message: messageText,
+            status:'',
+        }
+       },
+       sendMessage(){
+        
+       }
+       
     },
     computed:{
         activeContact(){
