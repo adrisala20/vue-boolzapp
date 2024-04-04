@@ -18,12 +18,14 @@ body{
 #app{
     width: 100%;
     height: 100vh;
+    padding: 80px;
     background: linear-gradient(180deg,#009688 20%, #D8DBD5 20% );
 }
 
-/* ***** contacts**** */
+/* *********** CONTACTS **********/
 #contactsContainer {
     width: 40%;
+    border-right: 1px solid rgb(211, 210, 210);
 }
 .toolbar {
     height: 70px;
@@ -36,17 +38,19 @@ body{
     height: calc(100% - 190px);
     overflow-y: auto;
 }
-/********************* contact *******/
+/** contact **/
 .contact{
     padding: 10px;
     border-bottom: 1px solid var(--color-bg-toolbar-graylight);
-}
+    cursor:pointer;
+} 
+
 /* toolbar */
 .user div img{
-    width: 17%;
+    width: 40px;
 }
 .icons i{
-    padding-left: 10px;
+    padding-left: 15px;
     color: var(--color-icon-graylight);
     cursor: pointer;
 }
@@ -74,8 +78,9 @@ body{
 }
 
 /* contact */
-.contact img{
-    width: 30%;
+.avatar img{
+    width: 60px;
+    padding-right: 15px;
 }
 .active{
     background-color: var(--color-bg-toolbar-graylight);
@@ -92,10 +97,9 @@ body{
     padding: 20px;
 }
 .msg{
-    width: 250px;
+    width: 300px;
     border-radius: 10px;
-    border: 1px solid ghostwhite;
-    padding: 15px;
+    padding: 10px;
 }
 .sent{
     background-color: var(--color-bg-chat-green);
