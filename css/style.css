@@ -85,6 +85,9 @@ body{
 .active{
     background-color: var(--color-bg-toolbar-graylight);
 }
+.contact:hover{
+    background-color: var(--color-icon-graylight);
+}
 /* ************ CHAT *********** */
 #chatContainer{
     width: 60%;
