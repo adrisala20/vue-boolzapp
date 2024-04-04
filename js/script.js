@@ -1,6 +1,6 @@
 import { contacts } from "./data.js";
 
-//const dt = luxon.DateTime;
+const dt = luxon.DateTime;
 
 const{createApp}= Vue;
 createApp ({
@@ -15,15 +15,17 @@ createApp ({
        clickActiveContact(id){
         this.activeContactId = id;
        },
-       createMessage(){
+       createMessage(message){
         const newMessage = {
-            date: '',
+            date: dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss'),
             message: messageText,
-            status:'',
+            status:'send'
         }
-       },
+        return newMessage;
+       }, 
        sendMessage(){
-        
+        let newMessage = this.createMessage(this.messageText);
+        this.activeContact.message.push(newMessage)
        }
        
     },
