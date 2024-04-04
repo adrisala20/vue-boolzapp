@@ -10,6 +10,7 @@ createApp ({
             activeContactId: 1,
             messageText:'',
             searchText:'',
+            removeMessage: -1,
         }
     },
     methods:{
@@ -34,8 +35,15 @@ createApp ({
             this.activeContact.messages.push(newMessage)
         },1000)
 
-       }    
-    },
+       },
+       dropdown(index){
+        if(this.removeMessage != index){
+            this.removeMessage = index;
+        }else{
+            this.removeMessage = -1;
+        }
+       }
+       },
     computed:{
         activeContact(){
             return this.contacts.find((el)=> el.id ===this.activeContactId)

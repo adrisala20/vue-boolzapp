@@ -103,7 +103,13 @@
                 <div class="chat">
                     <div class="d-flex p-3" v-for="(msg,index) in activeContact.messages">
                         <div class="msg" :class="msg.status">
-                            <div>{{msg.message}}</div>
+                           
+                            <button class="btn" type="button" @click="dropdown (index)">
+                                <p>{{msg.message}}</p>
+                            </button>
+                            <ul class="buttonMessage">
+                                <li></li>
+                            </ul>
                             <span>{{msg.date}}</span>
                         </div>
                         
