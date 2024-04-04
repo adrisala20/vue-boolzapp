@@ -15,18 +15,24 @@ createApp ({
        clickActiveContact(id){
         this.activeContactId = id;
        },
-       createMessage(message){
+       createMessage(message, status){
         const newMessage = {
             date: dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss'),
-            message: this.messageText,
-            status:'sent'
+            message: message,
+            status:status
         }
         return newMessage;
        }, 
        sendMessage(){
-        let newMessage = this.createMessage(this.messageText);
+        let newMessage = this.createMessage(this.messageText,'sent');
         this.activeContact.messages.push(newMessage);
-        return
+        this.messageText='';
+
+        setTimeout(()=>{
+            let newMessage = this.createMessage('ok','received')
+            this.activeContact.messages.push(newMessage)
+        },1000)
+
        }       
     },
     computed:{
