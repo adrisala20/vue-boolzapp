@@ -44,6 +44,10 @@ body{
     border-bottom: 1px solid var(--color-bg-toolbar-graylight);
     cursor:pointer;
 } 
+.infoContact{
+    padding-left: 10px;
+    padding-top: 10px;
+}
 
 /* toolbar */
 .user div img{
@@ -80,18 +84,21 @@ body{
 /* contact */
 .avatar img{
     width: 60px;
-    padding-right: 15px;
 }
 .active{
     background-color: var(--color-bg-toolbar-graylight);
 }
 .contact:hover{
-    background-color: var(--color-icon-graylight);
+    background-color: var(--color-bg-toolbar-graylight);
 }
 /* ************ CHAT *********** */
 #chatContainer{
     width: 60%;
     background-image: url(/img/mine.jpg);
+}
+.infoChat{
+    padding-top: 20px;
+    padding-left: 10px;
 }
 /* chat */
 .chat{
@@ -100,7 +107,7 @@ body{
     padding: 20px;
 }
 .msg{
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
     padding: 10px;
 }

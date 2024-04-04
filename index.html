@@ -33,7 +33,7 @@
                             <img src="img/avatar_io.jpg" alt="user photo" class=" img-fluid rounded rounded-circle ">
                         </div>
                     </div>
-                    <div>
+                    <div class="pt-3 ps-2  ">
                         <h6>Adriana</h6>
                     </div>
                     <div class="icons d-flex ms-auto ">
@@ -66,8 +66,8 @@
                         <div class="avatar">
                             <img :src="'./img/' + contact.avatar" :alt="contact.name" class="img-fluid rounded-circle ">
                         </div>
-                        <div>
-                            <h6 class="text-capitalize ">{{contact.name}}</h6>
+                        <div class=" infoContact">
+                            <h6 class="text-capitalize mb-0  ">{{contact.name}}</h6>
                             <p class="fw-light fs-6 text-body-tertiary  ">Ultimo messaggio</p>
                         </div>
                         <div class="time ms-auto ">
@@ -81,11 +81,11 @@
             <div id="chatContainer" class=" d-flex flex-column align-content-between  ">
                 <!-- toolbar -->
                 <div class="toolbar p-3 d-flex justify-content-between  align-items-center ">
-                    <div class="user d-flex ">
+                    <div class="user d-flex align-items-center ">
                         <div>
                             <img :src="'./img/' + activeContact.avatar" :alt="activeContact.name" class=" img-fluid rounded rounded-circle ">
                         </div>
-                        <div>
+                        <div class="infoChat ">
                             <h6 class="m-0 ">{{activeContact.name}}</h6>
                             <p class="fw-light fs-6 text-body-tertiary ">Ultimo accesso oggi</p>
                         </div>
