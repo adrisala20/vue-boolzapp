@@ -57,12 +57,12 @@
                 <div class="search">
                     <div class="input-group container-fluid pt-1 ">
                         <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat">
+                        <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" v-model="searchText">
                       </div>
                 </div>
                 <!-- contact -->
                 <div class="contacts">
-                    <div class="contact d-flex" :class="{'active': activeContactId === contact.id}" v-for="(contact,index) in contacts" :key="contacts.id" @click="clickActiveContact(contact.id)">
+                    <div class="contact d-flex" :class="{'active': activeContactId === contact.id}" v-for="(contact,index) in searchContact" :key="contacts.id" @click="clickActiveContact(contact.id)">
                         <div class="avatar">
                             <img :src="'./img/' + contact.avatar" :alt="contact.name" class="img-fluid rounded-circle ">
                         </div>

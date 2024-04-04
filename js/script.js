@@ -9,6 +9,7 @@ createApp ({
             contacts,
             activeContactId: 1,
             messageText:'',
+            searchText:'',
         }
     },
     methods:{
@@ -33,12 +34,15 @@ createApp ({
             this.activeContact.messages.push(newMessage)
         },1000)
 
-       }       
+       }    
     },
     computed:{
         activeContact(){
             return this.contacts.find((el)=> el.id ===this.activeContactId)
-        }, 
+        },
+        searchContact(){
+            return this.contacts.filter((el)=> el.name.toLowerCase().includes(this.searchText.toLowerCase()) )
+        }
     },
     mounted(){
         console.log(this.contacts)
