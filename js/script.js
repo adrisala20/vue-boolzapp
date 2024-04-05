@@ -27,15 +27,17 @@ createApp ({
         return newMessage;
        }, 
        sendMessage(){
+        if(this.messageText.trim()!== ''){
+
         let newMessage = this.createMessage(this.messageText,'sent');
         this.activeContact.messages.push(newMessage);
         this.messageText='';
-
+        
         setTimeout(()=>{
             let newMessage = this.createMessage('ok','received')
             this.activeContact.messages.push(newMessage)
         },1000)
-
+         }
        },
        openDropdown(index){
         if(this.removeMessage != index){
