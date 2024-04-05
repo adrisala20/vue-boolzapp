@@ -48,9 +48,14 @@ createApp ({
        },
         deleteMessage(index){
         this.activeContact.messages.splice(index,1);
-
-        }
+        },
+       lastMessage(id){
+         const index = this.contacts.messages.findIndex((el)=> el.id === id);
+         const lastMessage = this.contacts.messages[this.contacts.messages.length - 1];
+         return this.contacts[index].message[lastMessage];
        },
+       
+    },
     computed:{
         activeContact(){
             return this.contacts.find((el)=> el.id ===this.activeContactId)
