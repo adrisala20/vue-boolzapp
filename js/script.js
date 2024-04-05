@@ -16,6 +16,7 @@ createApp ({
     methods:{
        clickActiveContact(id){
         this.activeContactId = id;
+        this.removeMessage = -1
        },
        createMessage(message, status){
         const newMessage = {

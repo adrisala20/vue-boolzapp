@@ -112,7 +112,7 @@
                                 <button class="btn btn-succes" @click="openDropdown(index)"> <i class="fa-solid fa-chevron-down"></i>                                </button>
                             </div>
                             <ul class="dropdown-menu  " :class="{'show' : removeMessage === index}">
-                                <li class="li-dropdown " type="button" @click="deleteMessage(contacts,index)"> Elimina messagggio
+                                <li class="dropdown-item  " type="button" @click="deleteMessage(activeContact.messages,index)"> Elimina messagggio
                                 </li>
                             </ul>
                             <div class="time-msg ">
