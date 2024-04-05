@@ -45,7 +45,7 @@ createApp ({
         }
        },
         deleteMessage(index){
-        this.contacts.messages.splice(index,1)
+        this.activeContact.messages.splice(index,1)
         }
        },
     computed:{
