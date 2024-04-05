@@ -110,6 +110,7 @@ body{
     width: 350px;
     border-radius: 10px;
     padding: 10px;
+    position: relative;
 }
 .sent{
     background-color: var(--color-bg-chat-green);
@@ -118,6 +119,11 @@ body{
 .received{
     background-color: white;
     margin-right: auto;
+}
+
+.deleteMessage{
+    background-color: #b1b1b1;
+    padding: 5px;
 }
 /* toolbar */
 .toolbarChat{

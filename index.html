@@ -57,15 +57,18 @@
                 <div class="search">
                     <div class="input-group container-fluid pt-1 ">
                         <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" v-model="searchText">
-                      </div>
+                        <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat"
+                            v-model="searchText">
+                    </div>
                 </div>
                 <!-- contact -->
                 <div class="contacts">
                     <div class="alert alert-warning " v-if="searchContact < 1">
                         <h6>l'utente non é presente</h6>
                     </div>
-                    <div class="contact d-flex" :class="{'active': activeContactId === contact.id}" v-for="(contact,index) in searchContact" :key="contacts.id" @click="clickActiveContact(contact.id)">
+                    <div class="contact d-flex" :class="{'active': activeContactId === contact.id}"
+                        v-for="(contact,index) in searchContact" :key="contacts.id"
+                        @click="clickActiveContact(contact.id)">
                         <div class="avatar">
                             <img :src="'./img/' + contact.avatar" :alt="contact.name" class="img-fluid rounded-circle ">
                         </div>
@@ -86,7 +89,8 @@
                 <div class="toolbar p-3 d-flex justify-content-between  align-items-center ">
                     <div class="user d-flex align-items-center ">
                         <div>
-                            <img :src="'./img/' + activeContact.avatar" :alt="activeContact.name" class=" img-fluid rounded rounded-circle ">
+                            <img :src="'./img/' + activeContact.avatar" :alt="activeContact.name"
+                                class=" img-fluid rounded rounded-circle ">
                         </div>
                         <div class="infoChat ">
                             <h6 class="m-0 ">{{activeContact.name}}</h6>
@@ -103,16 +107,18 @@
                 <div class="chat">
                     <div class="d-flex p-3" v-for="(msg,index) in activeContact.messages">
                         <div class="msg" :class="msg.status">
-                           
-                            <button class="btn" type="button" @click="dropdown (index)">
-                                <p>{{msg.message}}</p>
-                            </button>
-                            <ul class="buttonMessage">
-                                <li></li>
-                            </ul>
+                            <p>{{msg.message}}</p>
                             <span>{{msg.date}}</span>
                         </div>
-                        
+                         <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle"@click="openDropdown(index)">     
+                            </button>
+                            <ul class="dropdown-menu"  :class="{'show' : removeMessage === index}" >
+                                <li @click="deleteMessage(index)"> Elimina messagggio
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
                 <!-- toolbarchat -->
@@ -121,7 +127,8 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="inputChat">
-                        <input type="text" class="form-control container-fluid "placeholder="Scrivi un messaggio" v-model="messageText" @keyup.enter="sendMessage(message)">
+                        <input type="text" class="form-control container-fluid " placeholder="Scrivi un messaggio"
+                            v-model="messageText" @keyup.enter="sendMessage(message)">
                     </div>
                     <div class="icon">
                         <i class="fa-solid fa-microphone"></i>
@@ -140,7 +147,8 @@
 
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </body>
 
 </html>

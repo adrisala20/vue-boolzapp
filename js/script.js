@@ -36,13 +36,17 @@ createApp ({
         },1000)
 
        },
-       dropdown(index){
+       openDropdown(index){
         if(this.removeMessage != index){
             this.removeMessage = index;
         }else{
             this.removeMessage = -1;
         }
-       }
+       },
+    //    deleteMessage(){
+    //     this.activeContact.messages.splice(index,1);
+    //     this.dropdowm(index)
+    //    }
        },
     computed:{
         activeContact(){
