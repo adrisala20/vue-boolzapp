@@ -43,10 +43,9 @@ createApp ({
             this.removeMessage = -1;
         }
        },
-    //    deleteMessage(){
-    //     this.activeContact.messages.splice(index,1);
-    //     this.dropdowm(index)
-    //    }
+        deleteMessage(index){
+        this.contacts.messages.splice(index,1)
+        }
        },
     computed:{
         activeContact(){

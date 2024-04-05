@@ -108,17 +108,18 @@
                     <div class="d-flex p-3" v-for="(msg,index) in activeContact.messages">
                         <div class="msg" :class="msg.status">
                             <p>{{msg.message}}</p>
-                            <span>{{msg.date}}</span>
-                        </div>
-                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle"@click="openDropdown(index)">     
-                            </button>
-                            <ul class="dropdown-menu"  :class="{'show' : removeMessage === index}" >
-                                <li @click="deleteMessage(index)"> Elimina messagggio
+                            <div class="a-dropdown">
+                                <button class="btn btn-succes" @click="openDropdown(index)"> <i class="fa-solid fa-chevron-down"></i>                                </button>
+                            </div>
+                            <ul class="dropdown-menu  " :class="{'show' : removeMessage === index}">
+                                <li class="li-dropdown " type="button" @click="deleteMessage(contacts,index)"> Elimina messagggio
                                 </li>
                             </ul>
-                        </div>
+                            <div class="time-msg ">
+                                <small>{{msg.date}}</small>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
                 <!-- toolbarchat -->
@@ -147,7 +148,9 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </body>
 
