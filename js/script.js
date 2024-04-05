@@ -47,7 +47,8 @@ createApp ({
         }
        },
         deleteMessage(index){
-        this.activeContact.messages.splice(index,1)
+        this.activeContact.messages.splice(index,1);
+
         }
        },
     computed:{
@@ -56,6 +57,9 @@ createApp ({
         },
         searchContact(){
             return this.contacts.filter((el)=> el.name.toLowerCase().includes(this.searchText.toLowerCase()) )
+        },
+        lastAccess(){
+            return this.activeContact.messages[this.activeContact.messages.length - 1].date;
         }
     },
     mounted(){

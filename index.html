@@ -94,7 +94,9 @@
                         </div>
                         <div class="infoChat ">
                             <h6 class="m-0 ">{{activeContact.name}}</h6>
-                            <p class="fw-light fs-6 text-body-tertiary ">Ultimo accesso oggi</p>
+                            <p class="fw-light fs-6 text-body-tertiary ">Ultimo accesso 
+                                {{lastAccess}}
+                            </p>
                         </div>
                     </div>
                     <div class="icons d-flex ">
@@ -112,7 +114,8 @@
                                 <button class="btn btn-succes" @click="openDropdown(index)"> <i class="fa-solid fa-chevron-down"></i>                                </button>
                             </div>
                             <ul class="dropdown-menu  " :class="{'show' : removeMessage === index}">
-                                <li class="dropdown-item  " type="button" @click="deleteMessage(activeContact.messages,index)"> Elimina messagggio
+                                <li class="dropdown-item" type="button">Message Info</li>
+                                <li class="dropdown-item " type="button" @click="deleteMessage(activeContact.messages,index)"> Elimina messagggio
                                 </li>
                             </ul>
                             <div class="time-msg ">
