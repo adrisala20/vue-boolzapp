@@ -50,9 +50,9 @@ createApp ({
         this.activeContact.messages.splice(index,1);
         },
        lastMessage(id){
-         const index = this.contacts.messages.findIndex((el)=> el.id === id);
-         const lastMessage = this.contacts.messages[this.contacts.messages.length - 1];
-         return this.contacts[index].message[lastMessage];
+         const index = this.contacts.findIndex((el)=> el.id === id);
+         const lastMessage = this.contacts[index].messages.length - 1;
+         return this.contacts[index].messages[lastMessage].message;
        },
        
     },
