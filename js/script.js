@@ -46,6 +46,12 @@ createApp ({
             this.removeMessage = -1;
         }
        },
+       closeDropdown(event) {
+        // Verifica se l'elemento cliccato è al di fuori della tendina
+        if (!this.$refs.dropdown.contains(event.target)) {
+          this.removeMessage = null;
+        }
+      },
         deleteMessage(index){
         this.activeContact.messages.splice(index,1);
         },

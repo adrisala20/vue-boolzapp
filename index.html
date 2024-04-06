@@ -113,7 +113,7 @@
                             <div class="a-dropdown">
                                 <button class="btn btn-succes" @click="openDropdown(index)"> <i class="fa-solid fa-chevron-down"></i>                                </button>
                             </div>
-                            <ul class="dropdown-menu  " :class="{'show' : removeMessage === index}">
+                            <ul class="dropdown-menu  " :class="{'show' : removeMessage === index}" @click="closeDropdown">
                                 <li class="dropdown-item" type="button">Message Info</li>
                                 <li class="dropdown-item " type="button" @click="deleteMessage(activeContact.messages,index)"> Elimina messagggio
                                 </li>
@@ -134,9 +134,9 @@
                         <input type="text" class="form-control container-fluid " placeholder="Scrivi un messaggio"
                             v-model="messageText" @keyup.enter="sendMessage(message)">
                     </div>
-                    <div class="icon">
+                    <div class="icon" >
+                        <i class="fa-solid fa-paper-plane" v-if="messageText != ''" @click="sendMessage()" @keyup.center="sendMessage(message)"></i>
                         <i class="fa-solid fa-microphone"></i>
-                        <!-- fa-paper-plane -->
                     </div>
 
                 </div>
