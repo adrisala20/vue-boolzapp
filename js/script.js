@@ -57,7 +57,7 @@ createApp ({
        lastTime(id){
         const index = this.contacts.findIndex((el)=> el.id === id);
         const lastDate = this.contacts[index].messages.length - 1;
-        return this.contacts[index].messages[lastDate].date;
+        return this.contacts[index].messages[lastDate].date.slice(10,16);
        }
        
     },
