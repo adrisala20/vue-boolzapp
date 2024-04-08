@@ -52,7 +52,7 @@ createApp ({
           this.removeMessage = null;
         }
       },
-        deleteMessage(index){
+        deleteMessage(message,index){
         this.activeContact.messages.splice(index,1);
         },
        lastMessage(id){
